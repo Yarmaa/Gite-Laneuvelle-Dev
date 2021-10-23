@@ -1,0 +1,236 @@
+.capitales {
+    text-transform: uppercase; 
+    letter-spacing: .1rem; 
+    text-decoration: none; 
+    color: var(--gris); font-size: 1rem
+}
+
+html {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.page {
+    margin-left: 4%;
+    padding-top: 2%;
+}
+
+
+/*-----------MENU----------------*/
+
+.menu_logo {
+    align-self: start;
+}
+
+/*-----------INTRO----------------*/
+
+.intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro_text {
+    width: 40%;
+    font-size: 1.7rem;    
+    padding-left: 6%;
+}
+
+.intro_text_titre {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.svg_barre {
+    position: absolute;
+    bottom: 40px;
+    left: 180px;
+}
+
+.intro_text p {
+    width: 75%;
+    font-size: 1.9rem;
+    line-height: 1.3;
+}
+
+.intro_img {
+    position: relative;
+    width: 60%;  
+    z-index: -1;
+}
+
+.intro_tampon {
+    position: absolute;
+    right: 73%;
+    bottom: 10%;
+    -webkit-animation:spin 35s linear infinite;
+    -moz-animation:spin 35s linear infinite;
+    animation:spin 35s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+/*-----------PRESENTATION----------------*/
+
+.presentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gris);
+    margin: 2% 10%;
+    padding: 5% 5%;
+}
+
+.presentation_text {
+    width: 50%;
+    padding: 0% 5%;
+}
+
+/*---------SLIDESHOW---------*/
+
+* {box-sizing:border-box}
+
+    /* Slideshow container */
+.presentation_slideshow_container {
+    padding: 0% 5%;
+    width: 40%;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    padding: 10px 10px;
+    transition: 0.6s ease;
+    border-radius: 100%;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {  
+    right: -20px;
+  }
+
+  .prev {  
+    left: -20px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    filter: sepia(100%);
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .6}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .6}
+    to {opacity: 1}
+  }
+
+
+/*-----------RESPONSIVE----------------*/
+
+/* Mobile */
+@media (max-width: 425px) {
+
+    /*INTRO*/
+
+    .page {
+        margin: 0;
+    }
+
+    .menu_logo {
+        align-self: center;
+        padding-bottom: 10%;
+        padding-top: 5%;
+        padding-left: 5%;
+    }
+    
+    .intro {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .intro_text {
+        background-color: antiquewhite;
+        width: 90%;
+    }
+    
+    .svg_barre {
+        bottom: 35px;
+        left: 150px;
+    }
+
+    .intro_text_titre {
+        font-size: 3rem;;
+    }
+    
+    .intro_text p {
+        width: 100%;
+        font-size: 2.5rem;
+    }
+    
+    .intro_img {
+        padding: 0;
+        position: relative;
+        width: 100%;
+        z-index: -1;
+    }
+    
+    .intro_tampon {
+        position: absolute;
+        right: 48%;
+        bottom: 10%;
+    }
+
+    /*PRESENTATION*/
+
+    .presentation {
+        width: 100%;
+        margin: 0;
+    }
+
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
